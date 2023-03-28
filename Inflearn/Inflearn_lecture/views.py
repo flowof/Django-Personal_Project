@@ -13,11 +13,15 @@ def home_list(request):
 def lecture_list(request):
 
     texts = myText.objects.filter()
-
     hot_lecture = myText.objects.filter(category="인기")
-    print(texts)
 
     return render(request, 'Inflearn_lecture\lecture_list.html',
-                  {'texts': texts},
-                  {'hot_lecture': hot_lecture}
+                  {'texts': texts, 'hot_lecture': hot_lecture}
                   )
+
+def login(request):
+
+    return render(request, 'Inflearn_lecture\login.html')
+
+def join(request):
+    return render(request, 'Inflearn_lecture\join.html')
