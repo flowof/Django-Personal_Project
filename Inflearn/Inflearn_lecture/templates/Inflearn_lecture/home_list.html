@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    여기는 홈 !!!!!!!!!!!
-    {{ texts }}
-</body>
-</html>
+<!-- base.html 에서 가져오겠다 -->
+{% extends 'Inflearn_lecture\base.html'%}
+
+<!-- 고정 상단바 아래 내용들 추가 -->
+{% block content %}
+
+    <h2>인기 강의</h2>
+    <div class="row">
+    {% for text in texts %}
+
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="../../media/{{text.img_url}}" alt="../../media/{{text.img_url}}" width="200">
+              <div class="caption">
+                <h3>{{text.title}}</h3>
+              </div>
+            </div>
+          </div>
+
+
+    {% endfor %}
+    </div>
+
+{% endblock %}

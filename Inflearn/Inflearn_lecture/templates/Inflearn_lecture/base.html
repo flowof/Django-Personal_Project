@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>인프런 따라 만들기</title>
+    <!--jQueryCDN : https://www.w3schools.com/jquery/jquery_get_started.asp-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+    <style>
+        * {
+            margin:0px;
+            padding:0px;
+        }
+
+        #main {
+            width:100%;
+            height:50vh;
+            background-image:url("https://cdn.inflearn.com/public/main_sliders/c4ae3432-1355-414c-be87-276d9abbaa8d/hero-628.png");
+        }
+
+        nav {
+            width:100%;
+            height:60px;
+            background-color:white;
+            line-height:50px;
+        }
+
+        nav ul {
+            float:right;
+        }
+
+        nav ul a {
+            color:green;
+        }
+
+        nav ul li {
+            margin:10px;
+            list-style-type:none;
+            display:inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="main">
+
+        <nav>
+            <a href="/">
+                <img src="https://cdn.inflearn.com/public/files/pages/da35da48-52a5-4ec6-b8d3-0389a47610ec/logo1.png" width="150">
+            </a>
+            <ul>
+                <a href="/lecture_list "><li>강의보기</li></a>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+                <li>메뉴5</li>
+            </ul>
+        </nav>
+
+    </div>
+    <!-- 아래 내용은 home_list.html 에서 추가할 것 -->
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
